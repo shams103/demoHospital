@@ -7,6 +7,13 @@
     --box-shadow: .5rem .5rem 0 rgba(22,160,133,.2);
     --text-shadow: .4rem .4rem 0 rgba(0,0,0,.2);
     --border: .2rem solid var(--blue);
+    --background: #fff;
+    --background-even-child: #eee;
+    --white-blog: #fff;
+    --btn-blue: #67d3ee;
+    --nav-link-color: #fff;
+
+   
 }
 *{
     font-family:'Nunito', serif;
@@ -18,6 +25,8 @@
     border: none;
     transition: all 0.3s linear;
 }
+
+
 
 html{
     font-size: 63.5%;
@@ -39,13 +48,17 @@ html::-webkit-scrollbar-thumb{
     border-radius: 5rem;
 }
 
+body{
+    background: var(--background);
+}
+
 section{
     padding: 2rem 9%;
 }
 
 
 section:nth-child(even){
-    background: #eee;
+    background: var(--background-even-child);
 }
 
 .heading{
@@ -68,7 +81,7 @@ section:nth-child(even){
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
     padding: .5rem;
-    color: var(--blue);
+    color: var(--btn-blue);
     padding-left: 1rem;
     cursor: pointer;
     font-size: 1.7rem;
@@ -94,6 +107,38 @@ section:nth-child(even){
 }
 
 
+/*=================dark theme================= */
+
+body.dark-theme{
+    --background-even-child: rgb(26, 26, 26);
+    --background: #111;
+    --light-color: #fff;
+    --nav-link-color: #000;
+    --black: #ccc;
+    --white-blog: rgb(26, 26, 26);
+    --btn-blue:#000;
+    --text-shadow: .4rem .4rem 0 rgba(255,255,255,0.1);
+
+}
+
+.header .change-theme{
+    padding: 0.6rem;
+    color: var(--black);
+    font-size: 2.7rem; 
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer; 
+
+}
+
+.header .change-theme:hover{
+    
+    background: var(--blue);
+    color: var(--white-blog);
+}
+
+/* ======================================== */
+
 
 .header{
     display: flex;
@@ -104,7 +149,7 @@ section:nth-child(even){
     align-items: center;
     z-index: 1000;
     box-shadow: var(--box-shadow);
-    background: #fff;
+    background: var(--background);
 }
 
 .header .logo{
@@ -131,10 +176,10 @@ section:nth-child(even){
  
  .header .navbar a:hover{
      background: var(--blue);
-     color: #fff;
+     color: var(--nav-link-color);
  }
 
- .header i{
+ .header .header-icon{
     font-size: 1.8rem;
     margin-left: .5rem;
     height: 4.5rem;
@@ -146,7 +191,7 @@ section:nth-child(even){
     cursor: pointer;
  }
 
- .header i:hover{
+ .header .header-icon:hover{
     color: #fff;
     background: var(--blue);
 }
@@ -230,7 +275,7 @@ section:nth-child(even){
 }
 
 .services .box-container .box{
-    background: #fff;
+    background: var(--background);
     box-shadow: var(--box-shadow);
     border: var(--border);
     border-radius: .5rem;
@@ -302,7 +347,7 @@ section:nth-child(even){
 }
 
 .doctors .box-container .box{
-    background: #fff;
+    background: var(--background);
     box-shadow: var(--box-shadow);
     border: var(--border);
     border-radius: .5rem;
@@ -369,7 +414,7 @@ section:nth-child(even){
     border: var(--blue);
     border: var(--border);
     border-radius: .5rem;
-    background: #fff;
+    background: var(--white-blog);
     box-shadow: var(--box-shadow);
     padding: 2rem;
     text-align: center;
@@ -385,12 +430,13 @@ section:nth-child(even){
 .book .box-container form select{
     width: 100%;
     margin: .7rem 0;
-    color: var(--black);
+    color:var(--black);
     border: var(--border);
     border-radius: .5rem;
     font-size: 1.6rem;
     text-transform: none;
     padding: 1rem;
+    background: var(--background);
 }
 
 .book .box-container form .btn{
@@ -405,7 +451,7 @@ section:nth-child(even){
 }
 
 .review .box-container .box{
-    background: #fff;
+    background: var(--background);
     box-shadow: var(--box-shadow);
     border: var(--border);
     border-radius: .5rem;
@@ -425,7 +471,7 @@ section:nth-child(even){
 }
 .review .box-container .box h3{
     font-size: 2.2rem;
-    color: #fff;
+    color: var(--background);
     padding: .5rem 0;
 }
 
@@ -462,7 +508,7 @@ section:nth-child(even){
 }
 
 .blogs .box-container .box{
-    background: #fff;
+    background: var(--white-blog);
     box-shadow: var(--box-shadow);
     border: var(--border);
     border-radius: .5rem;
@@ -551,6 +597,7 @@ section:nth-child(even){
     text-align: center;
     font-size: 2.3rem;
     margin-top: 2.4rem;
+   color: var(--light-color);
 }
 
 .footer .footer-container .credit span{
@@ -587,7 +634,7 @@ section:nth-child(even){
     .header .navbar{
         position: absolute;
         top: 115%; right: 2rem; 
-        background: #fff;
+        background: var(--background);
         width: 30rem;
         box-shadow: var(--box-shadow);
         border-radius: .5rem;
@@ -607,7 +654,7 @@ section:nth-child(even){
         margin: 1rem;
         padding: 1.4rem;
         font-size: 2rem;
-        background: #eee;
+        background: var(--background-even-child);
     }
 }    
 
