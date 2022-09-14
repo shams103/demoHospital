@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Hospital Website</title>
-
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -24,6 +24,7 @@
             <a href="#review">review</a>
             <a href="#blogs">blogs</a>
         </div>
+        <i class="uil uil-moon change-theme" id="theme-button"></i>
         <i class="fas fa-bars" id="menu-btn"></i>
     </div>
 
@@ -247,21 +248,22 @@
                 <img src="images/book-img.svg" alt="">
             </div>
             
-                <form action="">
+                <form action="#" id="form">
                     <h3>book your appointment</h3>
-                    <input type="text" placeholder="Name" id = "name" class="box">
-                    <input type="number" placeholder="Your number" class="box">
-                    <input type="email" placeholder="Email" class = "box">
-                    <input type="date" class="box">
-                    <select name="" id="">
+                    <input type="text" placeholder="Your name" class="box" name="name" minlength="3" maxlength="25" pattern="^[a-zA-Z][a-zA-Z ]+" required>
+                    <input type="tel" placeholder="Your number" class="box" minlength="10" maxlength="10" pattern="^[6789][0-9]{9}" required>
+                    <input type="email" placeholder="Email" class="box" required>
+                    <input type="date" class="box" id="date_picker" name="date" required>
+                    <select name="" id="" required>
                         <option value="" disabled hidden selected>Department</option>
+                        <option value="Paedtricain">Paedtricain</option>
                         <option value="Neurologist">Neurologist</option>
                         <option value="Dentist">Dentist</option>
                         <option value="Cardiologist">Cardiologist</option>
                         <option value="General Physician">General Physician</option>
                         <option value="ENT Specialist">ENT Specialist</option>
                     </select>
-                    <input type="submit" value="book now" class="btn" id="booking">
+                    <input type="submit" value="book now" class="btn">
                 </form>
            
         </div>
